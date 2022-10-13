@@ -12,7 +12,6 @@ from informatics.linear_search.linear_search_3 import get_indexes_of_equals
         ('5', '-1000 2 3 1000 4', '1000', '4'),
     ]
 )
-@pytest.mark.fresh
 def test_is_in_array(numbers_amount, numbers_array, number_to_check, expected):
     """Test expected input of is_in_array"""
     assert expected == get_indexes_of_equals(numbers_amount, numbers_array, number_to_check)
