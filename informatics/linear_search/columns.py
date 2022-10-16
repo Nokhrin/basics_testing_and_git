@@ -44,15 +44,11 @@ def is_number_in_column(number_search: int, rows_count: int, matrix: list) -> st
         for column_index in range(columns):
             if trans_matrix[row_index][column_index] == number_search:
                 result_list[row_index] = 'YES'
+                break  # leave row on first match
     return '\n'.join(result_list)
 
 
 if __name__ == '__main__':
-    # n, count, rows_in = 1789, 1, [[1789]]  # YES
-    # n, count, rows_in = 5, 2, [[4, 5], [2, 3]]  # NO YES
-    # n, count, rows_in = 6, 2, [[0, 0], [0, 0]]  # NO NO
-    # n, count, rows_in = -6, 3, [[2*(10**9), -6, -2*(10**9)], [-2*(10**8), 2*(10**7), 98], [-2*(10**6), 2*(10**2), 98]]  # NO YES NO
-    # print(rows_in)
     n, count, rows_in = get_input()
-    print(n, count, rows_in)
-    print(is_number_in_column(n, count, rows_in))
+    # print(is_number_in_column(n, count, rows_in), end='')
+    is_number_in_column(n, count, rows_in)
