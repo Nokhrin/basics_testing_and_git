@@ -34,24 +34,3 @@ def get_second_max(scores_count: int, scores_list: list) -> int:
 
 if __name__ == '__main__':
     print(get_second_max(int(input()), [int(score) for score in input().split(sep=' ')]))
-
-"""
-Примеры
-Входные данные
-
-5
-4 3 3 1 2 
-
-Выходные данные
-
-3
-
-Входные данные
-
-8
-1 2 5 3 5 6 6 5 
-
-Выходные данные
-
-5
-"""
