@@ -26,4 +26,5 @@ def is_in_array(array_size: str, array_str: str, number_to_find: str) -> str:
     return 'NO'
 
 
-# print(is_in_array(input(), input(), input()))
+if __name__ == '__main__':
+    print(is_in_array(input(), input(), input()))

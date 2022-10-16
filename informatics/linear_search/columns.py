@@ -50,5 +50,4 @@ def is_number_in_column(number_search: int, rows_count: int, matrix: list) -> st
 
 if __name__ == '__main__':
     n, count, rows_in = get_input()
-    # print(is_number_in_column(n, count, rows_in), end='')
-    is_number_in_column(n, count, rows_in)
+    print(is_number_in_column(n, count, rows_in), end='')

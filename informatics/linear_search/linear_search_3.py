@@ -25,4 +25,5 @@ def get_indexes_of_equals(array_size: str, array_str: str, number_to_find: str) 
     return ' '.join(indexes_list)
 
 
-# print(get_indexes_of_equals(input(), input(), input()))
+if __name__ == '__main__':
+    print(get_indexes_of_equals(input(), input(), input()))

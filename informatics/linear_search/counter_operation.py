@@ -46,5 +46,3 @@ def replace_max_with_min(marks: str) -> str:
 
 if __name__ == '__main__':
     print(replace_max_with_min(input()))
-    # print(replace_max_with_min('5 1 3 3 3 4'))  # 1 3 3 3 1
-    # print(replace_max_with_min('8 5 4 2 2 4 2 2 5'))  # 2 4 2 2 4 2 2 2

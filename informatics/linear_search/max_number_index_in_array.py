@@ -23,4 +23,5 @@ def get_max_number_index(array_size: str, array_str: str) -> int:
     return max_num[1]
 
 
-# print(get_max_number_index(input(), input()))
+if __name__ == '__main__':
+    print(get_max_number_index(input(), input()))

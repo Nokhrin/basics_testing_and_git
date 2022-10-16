@@ -25,4 +25,5 @@ def count_appearances(array_size: str, array_str: str, number_search: str) -> in
     return counter
 
 
-print(count_appearances(input(), input(), input()))
+if __name__ == '__main__':
+    print(count_appearances(input(), input(), input()))

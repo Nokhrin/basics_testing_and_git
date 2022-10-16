@@ -27,4 +27,5 @@ def get_nearest_number(array_size: str, array_str: str, number_to_find: str) -> 
     return numbers[index_min]
 
 
-# print(get_nearest_number(input(), input(), input()))  # for examination purposes
+if __name__ == '__main__':
+    print(get_nearest_number(input(), input(), input()))  # for examination purposes

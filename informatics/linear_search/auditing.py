@@ -26,4 +26,5 @@ def get_two_min_values(numbers_count: str, numbers_input: str) -> str:
     return ' '.join(min_values)
 
 
-# print(get_two_min_values(input(), input()))
+if __name__ == '__main__':
+    print(get_two_min_values(input(), input()))
