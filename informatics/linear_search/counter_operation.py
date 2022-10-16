@@ -18,6 +18,10 @@ def replace_max_with_min(marks: str) -> str:
     """Return numbers with max replaced by min value"""
     tmp_list = [int(mark) for mark in marks.split(sep=' ')]
     marks_count = tmp_list[0]
+
+    if marks_count < 1:
+        return ''
+
     marks_list = tmp_list[1:]
 
     max_value = -1
