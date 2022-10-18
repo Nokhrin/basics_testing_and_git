@@ -8,6 +8,7 @@ from informatics.linear_search.max_number_in_array import get_max_number
 from informatics.linear_search.max_number_index_in_array import get_max_number_index
 from informatics.linear_search.nearest_number import get_nearest_number
 from informatics.linear_search.silver_medal import get_second_max
+from informatics.search_and_sorting import linear_search
 
 
 class TestLinearProblems:
@@ -44,7 +45,9 @@ class TestLinearProblems:
         argnames='test_marks, expected_result',
         argvalues=[
             ('5 1 3 3 3 4', '1 3 3 3 1'),
-            ('100 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5', '2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2'),
+            (
+            '100 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5 5 4 2 2 4 5 4 2 2 5',
+            '2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2 2 4 2 2 4 2 4 2 2 2'),
             ('8 5 4 2 2 4 2 2 5', '2 4 2 2 4 2 2 2'),
             ('0', ''),
             ('1 5', '5'),
@@ -136,3 +139,16 @@ class TestLinearProblems:
     def test_get_second_max(self, actual_input: tuple, expected_output: str) -> None:
         """Test output"""
         assert get_second_max(actual_input[0], actual_input[1]) == expected_output
+
+    @pytest.mark.parametrize(
+        argnames='actual_input, expected_output',
+        argvalues=[
+            ((1, 1, [[-1000]]), 1),
+            ((2, 2, [[0, 0], [0, 0]]), 4),
+            ((2, 2, [[1, 2], [3, 4]]), 1),
+        ]
+    )
+    @pytest.mark.fresh
+    def test_get_saddle_points(self, actual_input: tuple, expected_output: int) -> None:
+        """Test output"""
+        assert linear_search.get_saddle_points(actual_input[0], actual_input[1], actual_input[2]) == expected_output
